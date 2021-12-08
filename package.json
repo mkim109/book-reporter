@@ -1,0 +1,40 @@
+{
+  "name": "book-reporter",
+  "version": "1.0.0",
+  "description": "A book report app that archives user's ratings and thoughts on any literature they've read",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon server/index.js",
+    "react-dev": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkim109/book-reporter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkim109/book-reporter/issues"
+  },
+  "homepage": "https://github.com/mkim109/book-reporter#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.1",
+    "mongoose": "^6.1.0",
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "install": "^0.13.0",
+    "npm": "^8.2.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

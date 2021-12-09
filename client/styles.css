@@ -1,0 +1,62 @@
+#app {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+#title {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 64px;
+}
+
+#reportHeader {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 30px;
+}
+
+.createReport {
+  display: inline-flex;
+  flex: 2;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.report {
+
+}
+
+.reportForm {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+#mandatory {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
+  color: red;
+}
+
+.archive {
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 25px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
+}
+
+.archiveTitle {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 32px;
+}
+
+.inProgress {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 24px;
+}
+
+.finished {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 24px;
+}

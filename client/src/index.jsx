@@ -15,10 +15,16 @@ class App extends React.Component {
       title: '',
       author: '',
       genre: '',
-      summary: ''
+      summary: '',
+      reports: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.getAllReports = this.getAllReports.bind(this);
+  }
+
+  componentDidMount() {
+    this.getAllReports();
   }
 
   handleChange(e) {
@@ -29,7 +35,6 @@ class App extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log('checking for state', this.state);
     let data = {
       startDate: this.state.startDate,
       endDate: this.state.endDate,
@@ -42,22 +47,35 @@ class App extends React.Component {
     };
     axios.post('/report', data)
       .then(res => {
-        console.log('client res', res);
-        // alert('Success creating report');
+        // console.log('client post res', res);
+        alert('Successfully created!');
+        this.getAllReports();
       })
       .catch(err => {
         alert('Error creating report');
       });
   }
 
+  getAllReports() {
+    axios.get('/reports')
+      .then(res => {
+        this.setState({
+          reports: res.data
+        });
+      })
+      .catch(err => {
+        console.log('client getAllReports err', err);
+      });
+  }
 
   render() {
     return (
-      <div>
+      <div className='mainContainer'>
         <p id='title'>Book Reporter</p>
-        <p id='reportHeader'>Start a new book report: </p>
-        <CreateReport handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-        <Archive />
+        <div className='centerContainer'>
+          <CreateReport handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+          <Archive reports={this.state.reports}/>
+        </div>
       </div>
     )
   }

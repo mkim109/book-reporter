@@ -58,6 +58,8 @@ class Archive extends React.Component {
       });
   }
 
+
+
   render() {
     return (
       <div className='archive'>
@@ -65,7 +67,8 @@ class Archive extends React.Component {
         {/* <p className='inProgressHeader'>IN PROGRESS</p>
         <InProgress reports={this.state.progress}/> */}
         {/* <p className='finishedHeader'>FINISHED</p> */}
-        <Finished reports={this.state.reports} getReport={this.getReport}/>
+        <Finished reports={this.state.reports} getReport={this.getReport}/><br/><br/><br/><br/>
+        <button className='resetBtn' onClick={this.props.deleteAll}>RESET</button>
       </div>
     )
   }

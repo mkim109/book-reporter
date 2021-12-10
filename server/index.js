@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
-const { createReport, getAllReports, getReport } = require('../database/index.js');
+const { createReport, getAllReports, getReport, deleteReports } = require('../database/index.js');
 
 const app = express();
 const PORT = 3003;
@@ -40,6 +40,16 @@ app.post('/report', (req, res) => {
     } else if (data) {
       // console.log('server success data', data);
       res.status(201).send(data);
+    }
+  });
+});
+
+app.delete('/reports', (req, res) => {
+  return deleteReports((err, data) => {
+    if (err) {
+      res.sendStatus(400);
+    } else {
+      res.sendStatus(200);
     }
   });
 });

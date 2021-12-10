@@ -5,7 +5,16 @@ const Finished = (props) => {
     return (
       <div>
         {props.reports.map((report) => (
-          <li className='finishedItems' key={report.title} onClick={(e) => props.getReport(report.title, e)}>{report.title} - {report.author}</li>
+          <div key={report.title} >
+            <a href='#nav'><li className='finishedItems'>{report.title} - {report.author}</li></a>
+            <div className='expandable' id='nav'>
+              <p><span className='listTitle'>Start Date:</span> {report.startDate ? report.startDate.substring(0, 10) : ''}</p>
+              <p><span className='listTitle'>End Date:</span> {report.endDate ? report.endDate.substring(0, 10) : ''}</p>
+              <p><span className='listTitle'>Rating:</span> {report.rating} / 5</p>
+              <p><span className='listTitle'>Genre:</span> {report.genre ? report.genre : ''}</p>
+              <p><span className='listTitle'>Summary:</span> <br/>{report.summary}</p>
+            </div>
+          </div>
         ))}
       </div>
     )

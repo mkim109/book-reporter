@@ -63,8 +63,19 @@ const getReport = (title, cb) => {
   });
 };
 
+const deleteReports = (cb) => {
+  Report.deleteMany({}).exec((err, data) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, data);
+    }
+  });
+};
+
 module.exports = {
   createReport: createReport,
   getAllReports: getAllReports,
-  getReport: getReport
+  getReport: getReport,
+  deleteReports: deleteReports
 };

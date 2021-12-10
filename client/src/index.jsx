@@ -21,6 +21,7 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.getAllReports = this.getAllReports.bind(this);
+    this.deleteAll = this.deleteAll.bind(this);
   }
 
   componentDidMount() {
@@ -47,8 +48,6 @@ class App extends React.Component {
     };
     axios.post('/report', data)
       .then(res => {
-        // console.log('client post res', res);
-        alert('Successfully created!');
         this.getAllReports();
       })
       .catch(err => {
@@ -68,13 +67,25 @@ class App extends React.Component {
       });
   }
 
+  deleteAll(e) {
+    e.preventDefault();
+    axios.delete('/reports')
+      .then(res => {
+        this.getAllReports();
+      })
+      .catch(err => {
+        console.log(err);
+        // alert('Error clearing archive. Please try again.');
+      });
+  }
+
   render() {
     return (
       <div className='mainContainer'>
         <p id='title'>Book Reporter</p>
         <div className='centerContainer'>
           <CreateReport handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-          <Archive reports={this.state.reports}/>
+          <Archive reports={this.state.reports} deleteAll={this.deleteAll}/>
         </div>
       </div>
     )

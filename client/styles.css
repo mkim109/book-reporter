@@ -1,9 +1,10 @@
 #app {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  padding: 10px;
   justify-content: space-around;
   cursor: auto;
+  background-color: bisque;
 }
 
 /* .mainContainer {
@@ -15,26 +16,30 @@
   font-size: 64px;
   display: flex;
   flex-direction: row;
+  flex-shrink: 1;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 5px;
 }
 
 .centerContainer {
   display: flex;
+  background-color: rgb(255, 249, 241);
+  padding: 10px;
 }
 
 #reportHeader {
   font-family: 'Readex Pro', sans-serif;
   font-size: 30px;
+  flex-shrink: 1;
 }
 
 .createReport {
   display: inline-flex;
   flex: 2;
+  flex-shrink: 1;
   flex-direction: column;
   margin: 10px;
-}
-
-.report {
-
 }
 
 .reportForm {
@@ -52,10 +57,12 @@
 .archive {
   display: inline-flex;
   flex: 1;
+  flex-shrink: 1;
   flex-direction: column;
   margin-left: 25px;
   font-family: 'Readex Pro', sans-serif;
   font-size: 15px;
+  width: 400px;
 }
 
 .archiveTitle {
@@ -76,4 +83,33 @@
 .finishedItems:hover {
   color: orange;
   cursor: crosshair;
+}
+
+.listTitle {
+  font-weight: bold;
+  color: rgb(199, 96, 48);
+}
+
+.expandable {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  line-height: 25px;
+  transition: all .5s ease-in-out;
+  height: 0;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  /* padding: 5px; */
+}
+
+.expandable:target {
+  height: auto;
+  width: 400px;
+}
+
+.resetBtn {
+  height: 25px;
+  width: 200px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
 }

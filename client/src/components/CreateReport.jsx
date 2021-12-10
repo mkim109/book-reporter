@@ -17,20 +17,10 @@ class CreateReport extends React.Component {
           <label className='reportForm' name='endDate'>End Date:&nbsp;&nbsp;
             <input type='date' name='endDate' onChange={this.props.handleChange}></input>
           </label><br/><br/>
-          <label className='reportForm' name='status'>Status<span id='mandatory'>*</span>:&nbsp;&nbsp;
+          {/* <label className='reportForm' name='status'>Status<span id='mandatory'>*</span>:&nbsp;&nbsp;
             <input type='radio' value='In Progress' name='status' onChange={this.props.handleChange} required></input>In Progress
             <input type='radio' value='Finished' name='status' onChange={this.props.handleChange}></input>Finished
-          </label><br/><br/>
-          <label className='reportForm' name='rating'>Rating:&nbsp;&nbsp;
-            <select name='rating' onChange={this.props.handleChange}>
-              <option value='' name='rating'>Select rating: </option>
-              <option value='5' name='rating'>5</option>
-              <option value='4' name='rating'>4</option>
-              <option value='3' name='rating'>3</option>
-              <option value='2' name='rating'>2</option>
-              <option value='1' name='rating'>1</option>
-            </select>
-          </label><br/><br/>
+          </label><br/><br/> */}
           <label className='reportForm' name='title'>Title<span id='mandatory'>*</span>:&nbsp;&nbsp;
             <input type='text' name='title' onChange={this.props.handleChange}></input>
           </label><br/><br/>
@@ -59,8 +49,18 @@ class CreateReport extends React.Component {
               <option value='Suspense/Thriller' name ='genre' >Suspense/Thriller</option>
             </select>
           </label><br/><br/>
-          <label className='reportForm' name='summary'>Summary: <br/>
-            <textarea className='reportForm' name='summary' cols='50' rows='6' placeholder='In your own words...' onChange={this.props.handleChange}></textarea>
+          <label className='reportForm' name='rating'>Rating<span id='mandatory'>*</span>:&nbsp;&nbsp;
+            <select name='rating' onChange={this.props.handleChange} required>
+              <option value='' name='rating'>Select rating: </option>
+              <option value='5' name='rating'>5</option>
+              <option value='4' name='rating'>4</option>
+              <option value='3' name='rating'>3</option>
+              <option value='2' name='rating'>2</option>
+              <option value='1' name='rating'>1</option>
+            </select>
+          </label><br/><br/>
+          <label className='reportForm' name='summary'>Summary<span id='mandatory'>*</span>: <br/>
+            <textarea className='reportForm' name='summary' cols='50' rows='6' placeholder='In your own words...' onChange={this.props.handleChange} required></textarea>
           </label><br/><br/>
           <input className='reportForm' type='submit' value='SUBMIT'></input>
         </form>

@@ -49,6 +49,7 @@ class App extends React.Component {
     axios.post('/report', data)
       .then(res => {
         this.getAllReports();
+        e.target.reset();
       })
       .catch(err => {
         alert('Error creating report');

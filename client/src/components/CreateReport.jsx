@@ -62,7 +62,7 @@ class CreateReport extends React.Component {
           <label className='reportForm' name='summary'>Summary<span id='mandatory'>*</span>: <br/>
             <textarea className='reportForm' name='summary' cols='50' rows='6' placeholder='In your own words...' onChange={this.props.handleChange} required></textarea>
           </label><br/><br/>
-          <input className='reportForm' type='submit' value='SUBMIT'></input>
+          <input className='reportFormBtn' type='submit' value='SUBMIT'></input>
         </form>
       </div>
     )

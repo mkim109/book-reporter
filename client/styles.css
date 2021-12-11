@@ -55,6 +55,14 @@ body {
   line-height: 25px;
 }
 
+.reportFormBtn {
+  height: 25px;
+  width: 200px;
+  background-color: rgb(255, 197, 126);
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
+}
+
 #mandatory {
   font-family: 'Readex Pro', sans-serif;
   font-size: 15px;
@@ -142,6 +150,7 @@ li {
 .resetBtn {
   height: 25px;
   width: 200px;
+  background-color: rgb(255, 197, 126);
   font-family: 'Readex Pro', sans-serif;
   font-size: 15px;
 }

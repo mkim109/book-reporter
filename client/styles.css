@@ -1,6 +1,6 @@
 #app {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: column; */
   padding: 10px;
   justify-content: space-around;
   cursor: auto;
@@ -13,14 +13,17 @@ body {
   padding: 0;
 }
 
-/* .mainContainer {
+.mainContainer {
   display: flex;
-} */
+  flex-direction: column;
+}
 
 #title {
   font-family: 'Readex Pro', sans-serif;
-  font-size: 64px;
+  /* font-size: 64px; */
+  font-size: 4em;
   display: flex;
+  /* position: relative; */
   flex-direction: row;
   flex-shrink: 1;
   align-items: center;

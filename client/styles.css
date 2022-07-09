@@ -33,12 +33,19 @@ body {
 
 .centerContainer {
   display: flex;
+  flex-wrap: wrap;
   background-color: rgb(255, 249, 241);
   padding: 10px;
   border-style: double;
 }
 
+#createReportContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 #reportHeader {
+  display: flex;
   font-family: 'Readex Pro', sans-serif;
   font-size: 30px;
   flex-shrink: 1;

@@ -8,7 +8,7 @@ class CreateReport extends Component {
 
   render() {
     return (
-      <div>
+      <div id="createReportContainer">
         <p id='reportHeader'>Start a new book report: </p>
         <form className='createReport' onSubmit={this.props.handleSubmit}>
           <label className='reportForm' name='startDate'>Start Date:&nbsp;&nbsp;

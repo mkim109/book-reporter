@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import CreateReport from './components/CreateReport.jsx';
 import Archive from './components/Archive.jsx';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {

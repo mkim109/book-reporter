@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 import InProgress from './InProgress.jsx';
 import Finished from './Finished.jsx';
 
-class Archive extends React.Component {
+class Archive extends Component {
   constructor(props) {
     super(props);
     this.state = {

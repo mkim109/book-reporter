@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 
-class CreateReport extends React.Component {
+class CreateReport extends Component {
   constructor(props) {
     super(props);
   }

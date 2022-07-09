@@ -1,7 +1,8 @@
 #app {
   /* display: flex;
   flex-direction: column; */
-  padding: 10px;
+  /* padding: 10px; */
+  padding: 0.625rem;
   justify-content: space-around;
   cursor: auto;
   background-color: bisque;
@@ -21,21 +22,24 @@ body {
 #title {
   font-family: 'Readex Pro', sans-serif;
   /* font-size: 64px; */
-  font-size: 4em;
+  /* font-size: 400%; */
+  font-size: min(10vw, 64px);
   display: flex;
   /* position: relative; */
   flex-direction: row;
   flex-shrink: 1;
   align-items: center;
   align-content: center;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  margin-bottom: 0.3125rem;
 }
 
 .centerContainer {
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(255, 249, 241);
-  padding: 10px;
+  /* padding: 10px; */
+  padding: 0.625rem;
   border-style: double;
 }
 
@@ -47,7 +51,8 @@ body {
 #reportHeader {
   display: flex;
   font-family: 'Readex Pro', sans-serif;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 1.875rem;
   flex-shrink: 1;
 }
 
@@ -56,26 +61,33 @@ body {
   flex: 2;
   flex-shrink: 1;
   flex-direction: column;
-  margin: 10px;
+  /* margin: 10px; */
+  margin: 0.625rem;
 }
 
 .reportForm {
   font-family: 'Readex Pro', sans-serif;
-  font-size: 15px;
-  line-height: 25px;
+  /* font-size: 15px; */
+  font-size: 0.9375rem;
+  /* line-height: 25px; */
+  line-height: 1.5625rem;
 }
 
 .reportFormBtn {
-  height: 25px;
-  width: 200px;
+  /* height: 25px; */
+  /* width: 200px; */
+  height: 1.5625rem;
+  width: 12.5rem;
   background-color: rgb(255, 197, 126);
   font-family: 'Readex Pro', sans-serif;
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: 0.9375rem;
 }
 
 #mandatory {
   font-family: 'Readex Pro', sans-serif;
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: 0.9375rem;
   color: red;
 }
 
@@ -84,10 +96,13 @@ body {
   flex: 1;
   flex-shrink: 1;
   flex-direction: column;
-  margin-left: 25px;
+  /* margin-left: 25px; */
+  margin-left: 1.5625rem;
   font-family: 'Readex Pro', sans-serif;
-  font-size: 15px;
-  width: 400px;
+  /* font-size: 15px; */
+  font-size: 0.9375rem;
+  /* width: 400px; */
+  width: 25rem;
 }
 
 .archiveTitle {
@@ -97,12 +112,14 @@ body {
 
 .inProgressHeader {
   font-family: 'Readex Pro', sans-serif;
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 1.875rem;
 }
 
 .finishedHeader {
   font-family: 'Readex Pro', sans-serif;
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 1.5rem;
 }
 
 .finishedItems:hover {
@@ -158,9 +175,12 @@ li {
 }  */
 
 .resetBtn {
-  height: 25px;
-  width: 200px;
+  /* height: 25px;
+  width: 200px; */
+  height: 1.5625rem;
+  width: 12.5rem;
   background-color: rgb(255, 197, 126);
   font-family: 'Readex Pro', sans-serif;
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: 0.9375rem;
 }

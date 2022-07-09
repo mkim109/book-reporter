@@ -60,7 +60,7 @@ class CreateReport extends Component {
             </select>
           </label><br/><br/>
           <label className='reportForm' name='summary'>Summary<span id='mandatory'>*</span>: <br/>
-            <textarea className='reportForm' name='summary' cols='50' rows='6' placeholder='In your own words...' onChange={this.props.handleChange} required></textarea>
+            <textarea id='reportFormSummary' name='summary' cols='50' rows='6' placeholder='In your own words...' onChange={this.props.handleChange} required></textarea>
           </label><br/><br/>
           <input className='reportFormBtn' type='submit' value='SUBMIT'></input>
         </form>

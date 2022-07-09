@@ -41,11 +41,13 @@ body {
   /* padding: 10px; */
   padding: 0.625rem;
   border-style: double;
+  width: min(90vw, 1000px);
 }
 
 #createReportContainer {
   display: flex;
   flex-direction: column;
+
 }
 
 #reportHeader {
@@ -73,6 +75,10 @@ body {
   font-size: min(5vw, 15px);
   /* line-height: 25px; */
   line-height: 1.5625rem;
+}
+#reportFormSummary {
+  width: min(75vw, 500px);
+  margin: 0.625rem;
 }
 
 .reportFormBtn {

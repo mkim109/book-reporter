@@ -22,7 +22,7 @@ app.get('/reports', (req, res) => {
 });
 
 app.get('/report', (req, res) => {
-  // console.log('server getReport req', req.query)
+  console.log('server getReport req', req.query)
   return getReport(req.query.title, (err, data) => {
     if (err) {
       res.sendStatus(400);
@@ -35,7 +35,7 @@ app.get('/report', (req, res) => {
 app.post('/report', (req, res) => {
   return createReport(req.body, (err, data) => {
     if (err) {
-      // console.log('server error', err);
+      console.log('server error', err);
       res.sendStatus(400);
     } else if (data) {
       // console.log('server success data', data);

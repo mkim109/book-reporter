@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/bookReports', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://127.0.0.1/bookReports', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const reportSchema = new mongoose.Schema({
   startDate: Date,

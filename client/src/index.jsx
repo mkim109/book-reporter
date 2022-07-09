@@ -76,7 +76,7 @@ class App extends React.Component {
       })
       .catch(err => {
         console.log(err);
-        // alert('Error clearing archive. Please try again.');
+        alert('Error clearing archive. Please try again.');
       });
   }
 

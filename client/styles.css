@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #app {
   /* display: flex;
   flex-direction: column; */
@@ -36,6 +40,7 @@ body {
 
 .centerContainer {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   background-color: rgb(255, 249, 241);
   /* padding: 10px; */
@@ -44,10 +49,15 @@ body {
   width: min(90vw, 1000px);
 }
 
+@media (max-width: 800px) {
+  .centerContainer {
+    flex-direction: column;
+  }
+}
+
 #createReportContainer {
   display: flex;
   flex-direction: column;
-
 }
 
 #reportHeader {

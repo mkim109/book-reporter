@@ -8,13 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: '',
+      author: '',
+      genre: '',
       startDate: '',
       endDate: '',
       status: '',
       rating: '',
-      title: '',
-      author: '',
-      genre: '',
       summary: '',
       reports: []
     };
@@ -37,13 +37,13 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
     let data = {
+      title: this.state.title,
+      author: this.state.author,
+      genre: this.state.genre,
       startDate: this.state.startDate,
       endDate: this.state.endDate,
       status: this.state.status,
       rating: this.state.rating,
-      title: this.state.title,
-      author: this.state.author,
-      genre: this.state.genre,
       summary: this.state.summary
     };
     axios.post('/report', data)
@@ -67,6 +67,18 @@ class App extends Component {
         console.log('client getAllReports err', err);
       });
   }
+
+  // updateReport() {
+
+  //   axios.patch('/report', data)
+  //     .then(res => {
+  //       console.log('client update report success', res);
+  //       alert('Successfully updated report!');
+  //     })
+  //     .catch(err => {
+  //       console.log('client updateReport error', err);
+  //     });
+  // }
 
   deleteAll(e) {
     e.preventDefault();

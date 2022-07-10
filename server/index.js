@@ -44,6 +44,17 @@ app.post('/report', (req, res) => {
   });
 });
 
+app.patch('/report', (req, res) => {
+  console.log('SERVER PATCH', req.body);
+  return updateReport(req.body, (err, data) => {
+    if (err) {
+      res.sendStatus(400);
+    } else if (data) {
+      res.status(201).send(data);
+    }
+  });
+});
+
 app.delete('/reports', (req, res) => {
   return deleteReports((err, data) => {
     if (err) {

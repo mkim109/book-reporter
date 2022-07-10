@@ -11,16 +11,6 @@ class CreateReport extends Component {
       <div id="createReportContainer">
         <p id='reportHeader'>Start a new book report: </p>
         <form className='createReport' onSubmit={this.props.handleSubmit}>
-          <label className='reportForm' name='startDate'>Start Date:&nbsp;&nbsp;
-            <input type='date' name='startDate' onChange={this.props.handleChange}></input>
-          </label><br/><br/>
-          <label className='reportForm' name='endDate'>End Date:&nbsp;&nbsp;
-            <input type='date' name='endDate' onChange={this.props.handleChange}></input>
-          </label><br/><br/>
-          {/* <label className='reportForm' name='status'>Status<span id='mandatory'>*</span>:&nbsp;&nbsp;
-            <input type='radio' value='In Progress' name='status' onChange={this.props.handleChange} required></input>In Progress
-            <input type='radio' value='Finished' name='status' onChange={this.props.handleChange}></input>Finished
-          </label><br/><br/> */}
           <label className='reportForm' name='title'>Title<span id='mandatory'>*</span>:&nbsp;&nbsp;
             <input type='text' name='title' onChange={this.props.handleChange}></input>
           </label><br/><br/>
@@ -48,6 +38,16 @@ class CreateReport extends Component {
               <option value='Short Stories' name ='genre' >Short Stories</option>
               <option value='Suspense/Thriller' name ='genre' >Suspense/Thriller</option>
             </select>
+          </label><br/><br/>
+          <label className='reportForm' name='startDate'>Start Date:&nbsp;&nbsp;
+            <input type='date' name='startDate' onChange={this.props.handleChange}></input>
+          </label><br/><br/>
+          <label className='reportForm' name='endDate'>End Date:&nbsp;&nbsp;
+            <input type='date' name='endDate' onChange={this.props.handleChange}></input>
+          </label><br/><br/>
+          <label className='reportForm' name='status'>Status<span id='mandatory'>*</span>:&nbsp;&nbsp;
+            <input type='radio' value='In Progress' name='status' onChange={this.props.handleChange} required></input>In Progress
+            <input type='radio' value='Finished' name='status' onChange={this.props.handleChange}></input>Finished
           </label><br/><br/>
           <label className='reportForm' name='rating'>Rating<span id='mandatory'>*</span>:&nbsp;&nbsp;
             <select name='rating' onChange={this.props.handleChange} required>

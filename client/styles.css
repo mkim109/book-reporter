@@ -1,14 +1,13 @@
 * {
   box-sizing: border-box;
+  background-color: bisque;
 }
 
 #app {
-  /* display: flex;
-  flex-direction: column; */
   padding: 0.625rem; /* 10px */
   justify-content: space-around;
   cursor: auto;
-  background-color: bisque;
+  /* background-color: bisque; */
   height: 1000px;
 }
 
@@ -27,7 +26,6 @@ body {
   font-family: 'Readex Pro', sans-serif;
   font-size: min(11vw, 64px);
   display: flex;
-  /* position: relative; */
   flex-direction: row;
   flex-shrink: 1;
   align-items: center;
@@ -45,22 +43,26 @@ body {
   width: min(90vw, 1000px);
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .centerContainer {
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
 #createReportContainer {
   display: flex;
   flex-direction: column;
+  background-color: rgb(255, 249, 241);
 }
 
 #reportHeader {
   display: flex;
+  flex-wrap: wrap;
   font-family: 'Readex Pro', sans-serif;
   font-size: min(7vw, 30px);
   justify-content: center;
+  background-color: rgb(255, 249, 241);
 }
 
 .createReport {
@@ -69,6 +71,7 @@ body {
   flex-shrink: 1;
   flex-direction: column;
   margin: 0.625rem; /* 10px */
+  background-color: rgb(255, 249, 241);
 }
 
 .reportForm {
@@ -76,7 +79,13 @@ body {
   font-size: 0.9375rem; /* 15px */
   font-size: min(5vw, 15px);
   line-height: 1.5625rem; /* 25px */
+  background-color: rgb(255, 249, 241);
 }
+
+input, select {
+  background-color: rgb(255, 249, 241);
+}
+
 #reportFormSummary {
   width: min(75vw, 500px);
   margin: 0.625rem;
@@ -94,6 +103,7 @@ body {
   font-family: 'Readex Pro', sans-serif;
   font-size: 0.9375rem; /* 15px */
   color: red;
+  background-color: rgb(255, 249, 241);
 }
 
 .archive {
@@ -101,10 +111,12 @@ body {
   flex: 1;
   flex-shrink: 1;
   flex-direction: column;
-  margin-left: 1.5625rem; /* 25px */
+  /* margin-left: 1.5625rem; 25px */
   font-family: 'Readex Pro', sans-serif;
   font-size: min(5vw, 15px); /* 15px or 0.9375rem */
   width: 25rem; /* 400px */
+  padding: 0.625rem;
+  background-color: rgb(255, 249, 241);
 }
 
 .archiveTitle {
@@ -113,6 +125,7 @@ body {
   justify-content: center;
   display: flex;
   justify-content: center;
+  background-color: rgb(255, 249, 241);
 }
 
 .inProgressHeader {
@@ -123,6 +136,10 @@ body {
 .finishedHeader {
   font-family: 'Readex Pro', sans-serif;
   font-size: 1.5rem; /* 24px */
+}
+
+.finishedItems {
+  background-color: rgb(255, 249, 241);
 }
 
 .finishedItems:hover {

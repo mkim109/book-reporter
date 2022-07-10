@@ -15,24 +15,38 @@ const reportSchema = new mongoose.Schema({
 
 const Report = mongoose.model('Report', reportSchema);
 
-const createReport = (data, cb) => {
-  // console.log('database data params', data);
-  Report.create({
-    startDate: data.startDate,
-    endDate: data.endDate,
-    status: data.status,
-    rating: data.rating,
-    title: data.title,
-    author: data.author,
-    genre: data.genre,
-    summary: data.summary
-  }, (err, data) => {
+const createOrUpdateReport = (data, cb) => {
+  const bookTitle = data.title;
+  const bookData = data;
+
+  Report.find({ title: bookTitle }, (err, success) => {
     if (err) {
-      // console.log('db createReport error', err);
-      cb(err, null);
-    } else {
-      // console.log('db createReport success data', data);
-      cb(null, data);
+      console.log('server update error', err);
+      Report.create({
+        startDate: data.startDate,
+        endDate: data.endDate,
+        status: data.status,
+        rating: data.rating,
+        title: data.title,
+        author: data.author,
+        genre: data.genre,
+        summary: data.summary
+      }, (err, data) => {
+        if (err) {
+          cb(err, null);
+        } else {
+          cb(null, data);
+        }
+      });
+    } else if (success) {
+      console.log("DB INDEX.JS LINE 43 REACHED!");
+      Report.updateOne({ title: bookTitle }, { $set: bookData }).exec((err, data) => {
+        if (err) {
+          cb(err, null);
+        } else if (data) {
+          cb(null, data);
+        }
+      });
     }
   });
 };
@@ -40,10 +54,8 @@ const createReport = (data, cb) => {
 const getAllReports = (cb) => {
   Report.find({}).exec((err, data) => {
     if (err) {
-      // console.log('db getAllReports error', err);
       cb(err, null);
     } else if (data) {
-      // console.log('db getReports success data', data);
       cb(null, data);
     }
   });
@@ -54,10 +66,8 @@ const getReport = (title, cb) => {
   console.log('db searchTitle', searchTitle);
   Report.find({ title: searchTitle }).exec((err, data) => {
     if (err) {
-      // console.log('db getReport error', err);
       cb(err, null);
     } else {
-      // console.log('db getReport success', data);
       cb(null, data);
     }
   });
@@ -74,7 +84,7 @@ const deleteReports = (cb) => {
 };
 
 module.exports = {
-  createReport: createReport,
+  createOrUpdateReport: createOrUpdateReport,
   getAllReports: getAllReports,
   getReport: getReport,
   deleteReports: deleteReports

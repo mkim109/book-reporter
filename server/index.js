@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
-const { createReport, getAllReports, getReport, deleteReports } = require('../database/index.js');
+const { createOrUpdateReport, getAllReports, getReport, deleteReports } = require('../database/index.js');
 
 const app = express();
 const PORT = 3003;
@@ -33,7 +33,7 @@ app.get('/report', (req, res) => {
 })
 
 app.post('/report', (req, res) => {
-  return createReport(req.body, (err, data) => {
+  return createOrUpdateReport(req.body, (err, data) => {
     if (err) {
       console.log('server error', err);
       res.sendStatus(400);

@@ -68,18 +68,6 @@ class App extends Component {
       });
   }
 
-  // updateReport() {
-
-  //   axios.patch('/report', data)
-  //     .then(res => {
-  //       console.log('client update report success', res);
-  //       alert('Successfully updated report!');
-  //     })
-  //     .catch(err => {
-  //       console.log('client updateReport error', err);
-  //     });
-  // }
-
   deleteAll(e) {
     e.preventDefault();
     axios.delete('/reports')
